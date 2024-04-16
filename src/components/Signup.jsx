@@ -26,7 +26,7 @@ import { useNavigate } from 'react-router-dom';
 const Signup = () => {
     const navigate=useNavigate();
     const gotolandingpage=()=>{
-        navigate("/")
+        navigate("/home")
     }
     const [showPassword, setShowPassword] = useState(true);
   return (

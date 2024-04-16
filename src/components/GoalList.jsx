@@ -180,7 +180,7 @@ const GoalList = () => {
                         _hover={{
 							bgGradient:'linear(to-r, green.200, pink.500)'
                         }}
-						onClick={()=>navigate("/schedule")}
+						onClick={()=>navigate("/tracker")}
                     >
                         Confirm
                     </Button>

@@ -18,9 +18,10 @@ Chart.register(CategoryScale);
 function App() {
   const [authUser,setAuthUser]=useState(false);
   const [chartData, setChartData] = useState({
-   
+    labels: Data.map((data) => data.num), 
     datasets: [
       {
+
         label: "calories",
         data: Data.map((data) => data.cal),
         scaleType: 'band',
@@ -41,7 +42,7 @@ function App() {
   return (
   <div>
     {/* <Landingpage/> */}
-    {/* <Signup/>  */}
+    {/* <Signup/> */}
     {/* <WorkoutTracker chartData={chartData}/> */}
     {/* <Workoutschedule/> */}
     {/* <Login/> */}
@@ -49,8 +50,9 @@ function App() {
     {/* <SecondCard/> */}
     {/* <GoalList/> */}
     <Routes>
-      <Route path='/'element={<Landingpage/>}/>
-      <Route path='/tracker'element={<WorkoutTracker/>}/>
+      <Route path='/'element={<Signup/>}/>
+      <Route path='/home'element={<Landingpage/>}/>
+      <Route path='/tracker'element={<WorkoutTracker chartData={chartData}/>}/>
       <Route path='/schedule'element={<Workoutschedule/>}/>
       
       <Route path='/secondcard'element={<SecondCard/>}/>
